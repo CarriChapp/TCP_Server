@@ -22,7 +22,8 @@ def handle_client(client_socket):
     print("[*] Recevied : %s" % request)
 
     # send back a packet
-    client_socket.send("ACK!")
+    response_message = "ACK!"
+    client_socket.send(response_message.encode())
 
     client_socket.close()
 
